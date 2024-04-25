@@ -1,10 +1,9 @@
-# Introduction
-This is a practical step by step process of setting up a simple local server and automating a daily backup for it.
-
 # STEPS FOR IMPLEMENTING AUTOMATIC DATABASE BACKUP TO GOOGLE DRIVE
 
-## STEP 1:
-### Create a Google cloud console account To Set Up Google Drive API.
+## Introduction
+This is a practical step by step process of setting up a simple local server and automating a daily backup for it.
+
+## STEP 1: Create a Google cloud console account To Set Up Google Drive API.
 ### Steps:
 - Go to the Google Developers Console [google developer console](https://console.developers.google.com/)
 - Create a new project.
@@ -15,8 +14,7 @@ This is a practical step by step process of setting up a simple local server and
 - A google approved developer account is preferable.
 - Switch the application from testing to publish
 
-## STEP 2:
-### On your Ubuntu Server, install gdrive and authorize.
+## STEP 2: On your Ubuntu Server, install gdrive and authorize.
 ### Steps:
 - Remotely connect to your ubuntu server using SSH key and password.
 - Run "sudo wget -O /usr/bin/gdrive https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64" to install gdrive. 
@@ -32,20 +30,17 @@ This is a practical step by step process of setting up a simple local server and
 - Run gdrive commands only on the path of it's installation.
 - If you are running the gdrive command from the home directory, specify the file path for example, "/usr/bin/gdrive/gdrive version" to verify the installed version, "/usr/bin/gdrive/gdrive account add" to add a new google drive account to your gdrive.
 
-## STEP 3:
-### Install MySQL client for exporting mysql databases(command line tool).
+## STEP 3: Install MySQL client for exporting mysql databases(command line tool).
 ### Steps:
 - Run sudo apt-get update and  d sudo apt-get install mysql-client to install on the remote server.
 - Do the necessary configurations.
 
-## STEP 4:
-### Create a Folder in Your Google Drive Account to Store the Backup Files.
+## STEP 4: Create a Folder in Your Google Drive Account to Store the Backup Files.
 ### Steps:
 - Log into your google drive account and create a new folder.
 - Note the last part of the folder link as your folder id for later use. See the link: [https://drive.google.com/drive/u/0/folders/13dwNw6qKND-7soAA58-aT8ZRQrcuEPxm](https://drive.google.com/drive/u/0/folders/13dwNw6qKND-7soAA58-aT8ZRQrcuEPxm), "13dwNw6qKND-7soAA58-aT8ZRQrcuEPxm" is the folder id.
 
-## STEP 5:
-### Create a Backup Script (backup.sh) to handle database backup and upload.
+## STEP 5: Create a Backup Script (backup.sh) to handle database backup and upload.
 ### Steps:
 - In your remote server, create a backup.sh file to handle database backup and upload.
 - Make script executable.
@@ -53,8 +48,7 @@ This is a practical step by step process of setting up a simple local server and
 - Ensure all the details in the script are all correct and well organized including file paths.
 - Note the file path of the script.
 
-## STEP 6:
-### Configure your crontab to automatically run the script periodically.
+## STEP 6: Configure your crontab to automatically run the script periodically.
 ### Steps:
 - Open your crontab file using "crontab -e" and add the line of code that'll run the script very specified period of time like in 2 days.
 - Save and close the crontab
@@ -69,8 +63,7 @@ This is a practical step by step process of setting up a simple local server and
 
 
 
-## STEP 7:
-### Test the Automatic Backup to be Sure Everything is Working Perfectly Fine.
+## STEP 7: Test the Automatic Backup to be Sure Everything is Working Perfectly Fine.
 ### Steps:
 - Manually run the "backup.sh" file to see the backup file it'll create and push to the created google drive folder.
 - Set the automatic backup to run let's say 15 mins and see the files being created and uploaded to the google drive folder automatically every 15 mins.
