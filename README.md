@@ -70,3 +70,23 @@ This is a practical step by step process of setting up a simple local server and
 ### Possible Bugs to be Fixed(Encountered):
 - In case the backup is not executed automatically, check that the provided file path of the backup file is correct in the crontab file.
 - Check for the crontab's execution permission, logging, syntax and environmental variables and see everything is set up fine.
+
+
+#              REQUIREMENTS FOR THE AUTOMATIC BACKUP
+## GOOGLE CLOUD CONSOLE ACCOUNT DETAILS:
+- Email, Username and Password of a google account for google console
+- Or a json file of an account credentials
+
+## THE DETAILS OF THE REMOTE UBUNTU SERVER:
+- SSH key (For logging into server)
+- Host / Server IP (For importing neccessary files)
+- Username (For importing neccessary files)
+- Password (For logging into server)
+
+## MARIADB-CLIENT CREDENTIALS (For exporting database):
+- Username
+- Password
+
+## GOOGLE DRIVE ACCOUNT CREDENTIALS(For logging in and creating a folder to store the backup files) Can be the same account for google cloud console:
+- Email
+- Password
