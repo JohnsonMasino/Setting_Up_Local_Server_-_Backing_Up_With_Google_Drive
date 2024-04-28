@@ -1,4 +1,4 @@
-# STEPS FOR IMPLEMENTING AUTOMATIC DATABASE BACKUP TO GOOGLE DRIVE
+# STEPS FOR IMPLEMENTING AN AUTOMATIC DATABASE BACKUP TO GOOGLE DRIVE
 
 ## Introduction
 This is a practical step by step process of setting up a simple local server and automating a daily backup for it.
