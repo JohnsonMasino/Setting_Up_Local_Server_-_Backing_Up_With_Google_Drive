@@ -72,6 +72,9 @@ This is a practical step by step process of setting up a simple local server and
 - Check for the crontab's execution permission, logging, syntax and environmental variables and see everything is set up fine.
 
 
+## STEP 8: Implement In Your Project
+Now you can implement in your project.
+
 #              REQUIREMENTS FOR THE AUTOMATIC BACKUP
 ## GOOGLE CLOUD CONSOLE ACCOUNT DETAILS:
 - Email, Username and Password of a google account for google console
