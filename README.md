@@ -18,7 +18,7 @@ This is a practical step by step process of setting up a simple local server and
 ### Steps:
 - Remotely connect to your ubuntu server using SSH key and password.
 - Run "sudo wget -O /usr/bin/gdrive https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64" to install gdrive. 
-- In the location where gdrive is installed, run "gdrive about" to locate the GitHub repository of the gdrive you just installed. You can check out the documentation there.
+- In the location where gdrive is installed, run "gdrive about" to activate. You can check out the documentation following the github link.
 - Run "gdrive account add" to add an account to your gdrive. From the application JSON file you downloaded, copy and add your client id and secret. Then follow the prompt to authorize access to your google drive account.
 ### Possible Bugs to be Fixed(Encountered):
 - Since you're connected to a remote server, you might not be able to install the gdrive directly to the server like the "gdrive v3.9.1" version. So what you have to do is to install it in your local machine and export it to your server as thus:
